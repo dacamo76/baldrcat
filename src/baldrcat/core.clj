@@ -23,7 +23,7 @@
       (println summary)
       (System/exit 0))
     (let [creds                   (assoc (select-keys options [:access-key :secret-key])
-                                    :endpoint "s3-eu-west-1.amazonaws.com")]
+                                    :endpoint "s3.amazonaws.com")]
       (let [s3-objs (map parse-s3-object-url arguments)]
         (doseq [{:keys [bucket object]} s3-objs]
           (let [obj      (get-object creds bucket object)
