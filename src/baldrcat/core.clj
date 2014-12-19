@@ -29,6 +29,5 @@
           (let [obj      (get-object creds bucket object)
                 instream (GZIPInputStream. (:content obj))
                 records  (baldr-seq instream)]
-            (println "Object:" obj)
             (doseq [r records]
               (println (String. r)))))))))
