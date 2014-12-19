@@ -7,8 +7,8 @@
 
 (def cli-options
   ;; An option with a required argument
-  [["-a" "--access-key ACCESS_KEY" "AWS Access Key" :validate [string?] :default (System/getenv "AWS_ACCESS_KEY")]
-   ["-s" "--secret-key SECRET_KEY" "AWS Secret Key" :validate [string?] :default (System/getenv "AWS_SECRET_KEY")]
+  [["-a" "--access-key AWS_ACCESS_KEY_ID" "AWS Access Key" :validate [string?] :default (System/getenv "AWS_ACCESS_KEY_ID")]
+   ["-s" "--secret-key AWS_SECRET_ACCESS_KEY" "AWS Secret Key" :validate [string?] :default (System/getenv "AWS_SECRET_ACCESS_KEY")]
    ["-h" "--help"]])
 
 (defn parse-s3-object-url [s]
